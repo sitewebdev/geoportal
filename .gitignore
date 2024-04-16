@@ -4,3 +4,4 @@ panels/*
 apps/*.json
 node*
 package-*
+.idea/vcs.xml
