@@ -1,0 +1,11 @@
+{
+  "js": ["lib/ol-ext/dist/ol-ext.js", "editionBar.js"],
+  "css": [
+    "lib/ol-ext/dist/ol-ext.css",
+    "editionBar.css",
+    "lib/bootstrap/bootstrap-icons.css",
+    "lib/bootstrap/icons/font/bootstrap-icons.css"
+  ],
+  "html": "editionBar.html",
+  "target": "page-content-wrapper"
+}

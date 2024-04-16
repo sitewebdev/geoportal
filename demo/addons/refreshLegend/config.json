@@ -1,0 +1,8 @@
+{
+  "js": ["refreshLegend.js"],
+  "css": "refreshLegend.css",
+  "html": "refreshLegend.html",
+  "target": "page-content-wrapper",
+  "options": {
+  }
+}

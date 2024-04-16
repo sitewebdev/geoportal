@@ -1,0 +1,47 @@
+.ol-bar-cusom-edit{
+    z-index: 1500 !important;
+    top: 60px !important;
+    /*left: -250px !i;*/
+    /*left: 20%;*/
+    /*height: 150px;*/
+    /*background: #0a3b59;*/
+}
+
+
+
+.ol-control.ol-bar .ol-control button:before {
+    text-align: center !important;
+}
+
+
+.ol-control.ol-bar .ol-control button{
+     display: block !important;
+     margin: 1px !important;
+     padding: 0 !important;
+     color: var(--ol-subtle-foreground-color);
+     font-weight: bold;
+     text-decoration: none;
+     font-size: inherit;
+     text-align: center !important;
+     height: 1.375em !important;
+     width: 1.375em !important;
+     line-height: .4em;
+     background-color: var(--ol-background-color);
+     border: none;
+     border-radius: 2px;
+ }
+
+
+
+.ol-notification-succes > div   {
+    background-color: var(--mycolor);
+    color: white;
+    bottom: 10px !important;
+    border-radius: 2px !important;
+    font-size: 15px;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    /* More style: */
+    height: 50px;
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <application title="GéoViewer" mouseposition="false" logo="" help="mviewer_help.html" measuretools="true"
+                 exportpng="true" style="css/themes/custom_style_dark.css" togglealllayersfromtheme="true"/>
+    <mapoptions maxzoom="19" projection="EPSG:3857" center="-920959,3528183" zoom="2"
+                projextent="-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244"/>
+
+    <baselayers style="gallery">
+        <baselayer type="OSM" id="ortho" label="Photo aérienne IGN" title="GéoPortail" maxscale="1000"
+                   thumbgallery="img/basemap/ortho.jpg"
+                   url="http://tile.openstreetmap.org/{z}/{x}/{y}.png"
+                   format="image/png" visible="true" fromcapacity="false"
+                   attribution=""
+                   maxzoom="22"/>
+    </baselayers>
+    <proxy url=""/>
+    <olscompletion url="https://api-adresse.data.gouv.fr/search/" type="ban"
+                   attribution="La recherche d'adresse est un service proposé par la BAN"/>
+    <searchparameters bbox="false" localities="true" features="false"/>
+
+    <themes>
+        <theme name="Population" collapsed="false" id="habitant" icon="fas fa-users">
+            <layer id="rp_struct_pop_geom" name="Densité de population (hab/km²)" visible="false" tiled="false"
+                   searchable="false" queryable="true"
+                   attributefilter="true" attributefield="level" attributevalues="Commune,EPCI,Pays"
+                   attributelabel="Échelle" attributestylesync="true" attributefilterenabled="true"
+                   infopanel="bottom-panel"
+                   infoformat="application/vnd.ogc.gml" featurecount="5"
+                   timefilter="true" timeinterval="year" timecontrol="slider" timemin="1999" timemax="2017"
+                   timevalues="1999,2007,2012,2017"
+                   style="rphab_densite@commune"
+                   stylesalias=""
+                   url="https://ows.region-bretagne.fr/geoserver/rb/wms"
+                   attribution="Sources: INSEE (RP) - OpenStreetMap | Traitements: Région Bretagne - Service connaissance, observation, planification et prospective"
+                   metadata="https://kartenn.region-bretagne.fr/geonetwork/srv/fre/catalog.search#/metadata/26324529-e0b7-450c-9506-2dcdca608f5f"
+                   metadata-csw="https://kartenn.region-bretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=26324529-e0b7-450c-9506-2dcdca608f5f">
+                <template
+                        url="https://kartenn.region-bretagne.fr/kartoviz/apps/region/territoire/templates/territoire.pop.densite.mst"></template>
+            </layer>
+<!--            <layer id="earthQuake"-->
+<!--                   name="Secousses"-->
+<!--                   visible="true"-->
+<!--                   url="demo/addons/earthQuakes/layer.js"-->
+<!--                   queryable="true"-->
+<!--                   type="customlayer"-->
+<!--                   customcontrol="true"-->
+<!--                   customcontrolpath="../demo/addons/earthQuakes/Controlsds"-->
+<!--                   legendurl="demo/heatmap/legend.png"-->
+<!--                   opacity="1"-->
+<!--                   expanded="true"-->
+<!--                   attribution=""-->
+<!--                   metadata=""-->
+<!--                   metadata-csw=""-->
+<!--                   tooltip="true"-->
+<!--                   tooltipcontent="{{title}}"-->
+<!--                   tooltipenabled="true"-->
+<!--            >-->
+<!--            </layer>-->
+            <layer id="cite:v_event_point"
+                   name="Events"
+                   visible="true"
+                   url="http://localhost:9092/geoserver/cite/wms"
+                   queryable="true"
+                   type="wms"
+                   opacity="1"
+                   expanded="true"
+                   attribution=""
+                   metadata=""
+                   metadata-csw=""
+            >
+            </layer>
+
+        </theme>
+
+
+    </themes>
+    <extensions>
+        <!--		<extension type="component" id="3D" path="demo/addons"/>-->
+        <extension type="component" id="layerfilter" path="demo/addons"/>
+        <extension type="component" id="fullscreen" path="demo/addons"/>
+<!--        <extension type="component" id="contextMenu" path="demo/addons"/>-->
+<!--        <extension type="component" id="editionBar" path="demo/addons"/>-->
+        <extension type="component" id="fileimport" path="demo/addons"/>
+        <extension type="component" id="refreshMap" path="demo/addons"/>
+        <extension type="component" id="refreshLegend" path="demo/addons"/>
+
+        <!--		<extension type="component" id="settings" path="demo/addons" />-->
+
+    </extensions>
+</config>

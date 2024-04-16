@@ -1,0 +1,6 @@
+dist/*
+node*
+panels/*
+apps/*.json
+node*
+package-*

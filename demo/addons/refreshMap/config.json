@@ -1,0 +1,9 @@
+{
+  "js": ["refreshMap.js"],
+  "css": "refreshMap.css",
+  "html": "refreshMap.html",
+  "target": "page-content-wrapper",
+  "options": {
+    "timeToRefresh": 10000
+  }
+}

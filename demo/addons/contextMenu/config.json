@@ -1,0 +1,6 @@
+{
+  "js": ["contextMenu.js", "lib/ol-context-menu/ol-contextmenu.iife.js"],
+  "css": ["contextMenu.css", "lib/ol-context-menu/ol-contextmenu.css"],
+  "html": "contextMenu.html",
+  "target": "map"
+}
