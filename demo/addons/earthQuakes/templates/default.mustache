@@ -1,0 +1,446 @@
+{{#features}}
+    <li class="item" id="templateRight" style="">
+        <h3 class="title-feature">{{title}}</h3>
+        <div id="select-features-list">
+            <span class="select-features" id="date">{{time }}</span>
+            <span class="select-features">Code : {{code}}</span>
+            <!-- Alerte: Chiffres de l'année en cours -->
+        </div>
+        <br>
+        <div>
+
+            <!-- L'entité utilise le service -->
+            <div class="user-service-oui">
+                <div class="service-block-actes">
+                    <div class="col1">
+                        <div class="icon-block">
+                            <img class="icon" height="36" width="36" src="demo/addons/earthQuakes/img/place.svg">
+                        </div>
+                    </div>
+                    <div class="service-block-info">
+                        <p class="service-title">Place</p>
+                        <p class="text-feature">{{place}}</p>
+                    </div>
+                </div>
+                <!-- Chiffres clés + graphique -->
+                <div class="service-block-number row " style="display: flex">
+                    <div class="col-sm-4 col-md-4 ">
+                        <div class="block-grey block-number center">
+                            <div>
+                                <img class="icon" src="demo/addons/earthQuakes/img/mag.svg"
+                                     style="width: 36px;height: 36px">
+                                <p class="number-feature-actes">{{mag}}</p>
+                                <p class="title-number-feature-actes">Magnitude</p>
+                            </div>
+                            <br><br>
+                            <div>
+                                <img class="icon" src="demo/addons/earthQuakes/img/depth.svg"
+                                     style="width: 36px;height: 36px">
+                                <p class="number-feature-actes">{{#depth}}{{depth}} km {{/depth}}{{^depth}}
+                                    --{{/depth}} </p>
+                                <p class="title-number-feature-actes">Profondeur</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                        <div class="block-grey block-graph center">
+
+                            <div style="text-align: center  ;    font-weight: 600;color: var(--mycolortheme3);">
+                                <h4>Détails</h4>
+                            </div>
+                            <div>
+                                <div class="detail">
+                                    <p class="title-detail" i18n="help.modal.doc"
+                                       title="Lien vers la documentation">Felt<i class="fa fa-info-circle"
+                                                                                 data-toggle="info"
+                                                                                 title="Le nombre total de rapports de ressenti soumis au système (DYFI)."></i>
+                                    </p>
+                                    <p class="value-detail">{{#felt}}{{felt}}{{/felt}}{{^felt}}--{{/felt}}</p>
+                                </div>
+                                <hr style="border-top: 0.5px dotted rgba(110,109,109,0.56);margin: 0">
+
+                                <div class="detail">
+                                    <p class="title-detail" i18n="help.modal.doc"
+                                       title="Lien vers la documentation">Cdi<i class="fa fa-info-circle"
+                                                                                data-toggle="info"
+                                                                                title="L'intensité maximale signalée pour l'événement"></i>
+                                    </p>
+                                    <p class="value-detail">{{#cdi}}{{cdi}}{{/cdi}}{{^cdi}}--{{/cdi}}</p>
+                                </div>
+                                <hr style="border-top: 0.5px dotted rgba(110,109,109,0.56);margin: 0">
+
+                                <div class="detail">
+                                    <p class="title-detail" i18n="help.modal.doc"
+                                       title="Lien vers la documentation">Mmi<i class="fa fa-info-circle"
+                                                                                data-toggle="info"
+                                                                                title="L'intensité instrumentale maximale estimée pour l'événement"></i>
+                                    </p>
+                                    <p class="value-detail">{{#mmi}}{{mmi}}{{/mmi}}{{^mmi}}--{{/mmi}}</p>
+                                </div>
+                                <hr style="border-top: 0.5px dotted rgba(110,109,109,0.56);margin: 0">
+
+                                <div class="detail">
+                                    <p class="title-detail" i18n="help.modal.doc"
+                                       title="Lien vers la documentation">Alerte<i class="fa fa-info-circle"
+                                                                                   data-toggle="info"
+                                                                                   title="Le niveau d'alerte"></i>
+                                    </p>
+                                    <p class="value-detail">{{#alert}}
+                                        <span style="background: {{alert}};color: transparent;border-radius: 0.5em">{{alert}}</span>{{/alert}}{{^alert}}
+                                        --{{/alert}}</p>
+                                </div>
+                                <hr style="border-top: 0.5px dotted rgba(110,109,109,0.56);margin: 0">
+
+                                <div class="detail">
+                                    <p class="title-detail" i18n="help.modal.doc"
+                                       title="Lien vers la documentation">Tsunami<i class="fa fa-info-circle"
+                                                                                    data-toggle="info"
+                                                                                    title="Ce drapeau est mis à « 1 » pour les grands événements dans les régions océaniques et à « 0 » dans le cas contraire. L’existence ou la valeur de ce drapeau n’indique pas si un tsunami a réellement eu lieu ou existera. Si la valeur du drapeau est 1, l'événement comprendra un lien vers le site Web de la NOAA Tsunami pour obtenir des informations sur les tsunamis."></i>
+                                    </p>
+                                    <p class="value-detail">{{tsunami}}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm-12">
+                        <div class="block-grey block-graph center">
+                            <div style="text-align: center ;font-weight: 600;color: var(--mycolortheme3);">
+                                <h4>Réplicats</h4>
+                            </div>
+                            <div style="display: flex;color: var(--mycolortheme3);background: rgba(255,255,255,0.4);border-radius: 10px;margin-bottom: 8px">
+                                <div class="col-sm-1 "
+                                     style="display: flex;justify-content: center;align-items: center">
+                                    <i class="fa fa-caret-right fa-2x"></i>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p style="font-weight: 700;font-size: 40px;padding-bottom:0;margin-bottom: 0 ">
+                                        6.8</p>
+                                    <p style="font-weight: 700;font-size: 15px;padding-top:0;margin-top: 0 ">
+                                        MAGNITUDE</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <table class="custom-table">
+                                        <tr>
+                                            <td>Place</td>
+                                            <td>:</td>
+                                            <td>sdsdsd</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Time</td>
+                                            <td>:</td>
+                                            <td>08 Sep 2023, 22:31 GMT</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Depth</td>
+                                            <td>:</td>
+                                            <td>18 km</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Coordonées</td>
+                                            <td>:</td>
+                                            <td>Lat:31.11 Lon:-8.44</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--                            <div id="idChart">-->
+                            <!--                                <canvas class="chart" id="ChartActesN_{{siren}}" data-codegeo="{{siren}}"-->
+                            <!--                                        data-a1="{{nb_acte_reg}}" data-a2="{{nb_acte_budg_fin}}"-->
+                            <!--                                        data-a3="{{nb_acte_deliberation}}" data-a4="{{nb_acte_autre}}"-->
+                            <!--                                        data-a5="{{nb_acte_contrat_conv}}" data-a6="{{nb_acte_indiv}}"-->
+                            <!--                                        style="height:170px;width: content-box;"></canvas>-->
+                            <!--                            </div>-->
+                            <!--                            <p class="title-chart-feature">Répartition des actes selon la nature</p>-->
+                            <!--                            <p class="subtitle-number-feature">pour l'entité sélectionnée</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="acces-service-actes" style="">
+                    <div class="btn-link-user">
+                        <a href="https://services.megalis.bretagne.bzh/service/teletransmission-des-actes-en-prefecture/"
+                           target="_blank">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L'entité n'utilise pas le service -->
+            <div class="user-service-non">
+                <div class="icon-block-actes">
+                    <img class="icon" src="/apps/megalis-services/img/flux_actes.svg">
+                </div>
+                <h2 class="user-title-feature-actes">Oops !</h2>
+                <p class="text-feature">Il semble que cette collectivité n'a pas encore utilisé le service de
+                    télétransmission des actes cette année.</p>
+                <div class="btn-link-user">
+                    <a href="https://services.megalis.bretagne.bzh/service/teletransmission-des-actes-en-prefecture/"
+                       target="_blank">En savoir plus</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </li>
+
+    <style>
+
+        /* Définition des propriétés de style pour le service */
+        :root {
+            --mycolor: #161A30;
+            --mycolortheme3: #4D79B8;
+            --myfont: 'Inter', sans-serif;
+        }
+
+        /* */
+
+        #templateRight {
+            padding: 10px;
+        }
+
+        .title-feature {
+            color: var(--mycolor);
+            font-family: var(--myfont);
+            font-size: 19px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .subtitle-feature {
+            color: var(--mycolor);
+            font-family: var(--myfont);
+            font-size: 18px;
+            margin-top: 7%;
+            line-height: 1;
+        }
+
+        .text-feature, p {
+            font-family: var(--myfont);
+            color: #555;
+            font-size: 13px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .block-grey {
+            border-radius: 20px;
+            background-color: #e2e2e28f;
+            /*height: auto;*/
+            height: 100%;
+        }
+
+        .block-number {
+            padding: 10px 10px;
+        }
+
+        .block-graph {
+            padding: 5px 10px;
+        }
+
+        /* Critères de selection des entités */
+
+        span.select-features {
+            background-color: var(--mycolor);
+            padding: 5px 10px;
+            color: white;
+            font-size: 11px;
+            font-family: var(--myfont);
+            border-radius: 12px;
+        }
+
+        /* Message d'alerte sur la validité des informations */
+
+        p.warning {
+            font-size: 11px !important;
+            font-style: italic !important;
+            font-weight: 500 !important;
+            margin: 10px 0px;
+        }
+
+        .warning-info2019, .warning-info2020 {
+            display: none;
+        }
+
+        .warning-info2021 {
+            display: block;
+        }
+
+        /* Affichage du contenu selon usagers O/N */
+        #user-OUI .user-service-non {
+            display: none;
+        }
+
+        #user-NON .user-service-oui {
+            display: none;
+        }
+
+        /* --- Mise en fome USER-OUI --- */
+
+        .user-service-oui {
+            padding: 20px 0px;
+        }
+
+        .service-block-actes {
+            background-color: var(--mycolortheme3);
+            padding: 5%;;
+            border-radius: 20px;
+        }
+
+        .service-block-info {
+            padding: 0px 0px 0px 90px;
+            /* color: white!important; */
+        }
+
+        .user-service-oui .icon-block {
+            width: 60px;
+            padding: 12px;
+            background-color: #ffffff33;
+            border-radius: 15px;
+            position: absolute;
+        }
+
+        .service-block-info p {
+            color: white;
+        }
+
+        p.service-title {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 0px 0px;
+            margin: 0;
+        }
+
+        /* Numbers */
+
+        .service-block-number {
+            margin-top: 20px;
+        }
+
+        .number-feature-actes {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--mycolortheme3);
+            margin: 10px 0px 0px;
+        }
+
+        .title-number-feature-actes {
+            font-weight: 600;
+            color: var(--mycolortheme3);
+            margin: 0;
+        }
+
+        .value-detail {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--mycolortheme3);
+        }
+
+        .title-detail {
+            font-weight: 500;
+            color: var(--mycolortheme3);
+            margin: 0;
+        }
+
+        .subtitle-number-feature {
+            font-size: 10px;
+            font-style: italic;
+        }
+
+        /* Chart */
+
+        p.title-chart-feature {
+            font-size: 12px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Bouton en savoir plus */
+
+        .acces-service-actes {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        /* --- Mise en fome USER-NON --- */
+
+        .user-service-non {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .user-service-non .icon-block-actes {
+            background-color: var(--mycolortheme3);
+            opacity: 0.8;
+            width: 60px;
+            border-radius: 15px;
+            padding: 12px;
+            margin: 0 auto;
+        }
+
+        h2.user-title-feature-actes {
+            font-weight: 600 !important;
+            color: var(--mycolortheme3);
+        }
+
+        .btn-link-user {
+            margin: 40px 0px;
+        }
+
+        .btn-link-user a {
+            font-family: var(--myfont);
+            border: solid 1px #161A30;
+            color: #161A30;
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin: 40px 0px;
+        }
+
+        .btn-link-user a:hover {
+            background-color: #161A30;
+            color: white !important;
+            -webkit-transition: background-color 0.5s ease-out;
+            -moz-transition: background-color 0.5s ease-out;
+            -o-transition: background-color 0.5s ease-out;
+            transition: background-color 0.5s ease-out;
+        }
+
+        .detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        }
+
+        .custom-table td {
+            border: none !important;
+            padding: 3px 2px !important;
+        }
+
+        .custom-table tr td:last-child {
+            color: #2a2a2a !important;
+            text-align: start;
+
+        }
+
+        .custom-table tr td:first-child {
+            text-align: start;
+            font-weight: 600;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="info"]').tooltip();
+        })
+        $("#date").text(moment({{time}}).format("DD MMM YYYY hh:mm a"))
+        console.log("{{ids}}")
+    </script>
+
+
+{{/features}}

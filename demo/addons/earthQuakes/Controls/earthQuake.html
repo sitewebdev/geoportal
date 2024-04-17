@@ -1,8 +1,57 @@
+<style>
+  .custom-cls-date{
 
+  }
+
+  #form-earthquake .input-group {
+    position: relative;
+    display: flex !important;
+    align-items: stretch;
+    width: 100%;
+  }
+  .custom-cls-date{
+    padding: 12px 0 0 0  ;
+  }
+  .custom-cls-date .input-group-text{
+    display: flex;
+    align-items: center;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    text-align: center;
+    white-space: nowrap;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0 10px 10px 0;
+  }
+  .custom-cls-date .form-control.input{
+    padding: 0;
+    border-radius: 10px 0 0 10px !important;
+    border: 1px solid #dee2e6;
+    background: unset !important;
+
+  }
+  .custom-cls-date .form-control.input.active{
+    padding: 0 !important;
+    min-width: 0px !important;
+  }
+  .error
+  {
+    color: red !important;
+  }
+  #form-earthquake button{
+    margin-top: 12px;
+  }
+  #form-earthquake .alert{
+    display: none;
+  }
+</style>
 <div>
-  <button class="col-lg btn btn-success btn-block" onclick="earthQuakeControl.createForm()">Filtrer</button>
+  <hr>
   <div id="form-earthquake"></div>
 </div>
-<script src="https://cdn.form.io/js/formio.embed.js"></script>
 
-<!--<script src="demo/addons/earthQuakes/lib/formio.js" ></script>-->
+
+

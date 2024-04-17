@@ -13,10 +13,6 @@ const refreshMap=(function (){
                     {
                         // ol.layer.getSource().updateParams({"Time": new Date().valueOf()})
                         ol.layer.getSource().changed()
-                        if (ol.dynamiclegend) {
-                            // var legendUrl = _getlegendurl(layer, scale);
-                            $("#legend-" + ol.id).attr("src", ol.legendurl);
-                        }
                     }
                 })
             },mviewer.customComponents.refreshMap.config.options['timeToRefresh'])

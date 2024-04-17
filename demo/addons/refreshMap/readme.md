@@ -1,7 +1,7 @@
 **1. Importer le plugin**
 ```
 <extensions>
-        <extension type="component" id="refreshLegend" path="demo/addons"/>
+        <extension type="component" id="refreshMap" path="demo/addons"/>
 </extensions>
 ```
 **2. Configurer le plugin**

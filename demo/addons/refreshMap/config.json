@@ -4,6 +4,6 @@
   "html": "refreshMap.html",
   "target": "page-content-wrapper",
   "options": {
-    "timeToRefresh": 10000
+    "timeToRefresh": 1000
   }
 }

@@ -1,3 +1,4 @@
-function show() {
-  alert("klhsdh");
+function show()
+{
+    alert("klhsdh")
 }
