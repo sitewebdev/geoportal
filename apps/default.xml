@@ -37,25 +37,25 @@
                 <template
                         url="https://kartenn.region-bretagne.fr/kartoviz/apps/region/territoire/templates/territoire.pop.densite.mst"></template>
             </layer>
-<!--            <layer id="earthQuake"-->
-<!--                   name="Secousses"-->
-<!--                   visible="true"-->
-<!--                   url="demo/addons/earthQuakes/layer.js"-->
-<!--                   queryable="true"-->
-<!--                   type="customlayer"-->
-<!--                   customcontrol="true"-->
-<!--                   customcontrolpath="../demo/addons/earthQuakes/Controlsds"-->
-<!--                   legendurl="demo/heatmap/legend.png"-->
-<!--                   opacity="1"-->
-<!--                   expanded="true"-->
-<!--                   attribution=""-->
-<!--                   metadata=""-->
-<!--                   metadata-csw=""-->
-<!--                   tooltip="true"-->
-<!--                   tooltipcontent="{{title}}"-->
-<!--                   tooltipenabled="true"-->
-<!--            >-->
-<!--            </layer>-->
+            <layer id="earthQuake"
+                   name="Secousses"
+                   visible="true"
+                   url="demo/addons/earthQuakes/layer.js"
+                   queryable="true"
+                   type="customlayer"
+                   customcontrol="true"
+                   customcontrolpath="../demo/addons/earthQuakes/Controlsds"
+                   legendurl="demo/heatmap/legend.png"
+                   opacity="1"
+                   expanded="true"
+                   attribution=""
+                   metadata=""
+                   metadata-csw=""
+                   tooltip="true"
+                   tooltipcontent="{{title}}"
+                   tooltipenabled="true"
+            >
+            </layer>
             <layer id="cite:v_event_point"
                    name="Events"
                    visible="true"
@@ -78,7 +78,7 @@
         <!--		<extension type="component" id="3D" path="demo/addons"/>-->
         <extension type="component" id="layerfilter" path="demo/addons"/>
         <extension type="component" id="fullscreen" path="demo/addons"/>
-<!--        <extension type="component" id="contextMenu" path="demo/addons"/>-->
+        <extension type="component" id="contextMenu" path="demo/addons"/>
 <!--        <extension type="component" id="editionBar" path="demo/addons"/>-->
         <extension type="component" id="fileimport" path="demo/addons"/>
         <extension type="component" id="refreshMap" path="demo/addons"/>
