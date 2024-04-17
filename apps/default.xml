@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-    <application title="GéoViewer-V1" mouseposition="false" logo="" help="mviewer_help.html" measuretools="true"
+    <application title="GéoViewer-V2" mouseposition="false" logo="" help="mviewer_help.html" measuretools="true"
                  exportpng="true" style="css/themes/custom_style_dark.css" togglealllayersfromtheme="true"/>
     <mapoptions maxzoom="19" projection="EPSG:3857" center="-920959,3528183" zoom="2"
                 projextent="-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244"/>
